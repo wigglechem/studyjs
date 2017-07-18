@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title>鼠标经过事件2</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="布尔教育 http://www.itbool.com" />
+<style>
+	div{
+		height: 200px;
+		width: 200px;
+		background: grey;
+	}
+</style>
+<script>
+	function t1(){
+alert('who is this?')
+	}
+	function t2(){
+		alert("请填写完整！")
+		return false;
+	}
+</script>
+</head>
+    <body>
+     <h1>鼠标经过事件2</h1>
+<div onmouseover="t1();"></div>
+	<form action="js12 鼠标经过事件2.html" onsubmit="return t2();">
+		<p><input type="text" name="username" id="" /></p>
+		<p><input type="text" name="email" id="" /></p>
+	    <p><input type="submit" value="提交"/></p>
+
+		
+	</form>
+	
+
+    </body>
+</html>
