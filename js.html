@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title>新建网页</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="布尔教育 http://www.itbool.com" />
+<style type="text/css">
+.text1{
+	
+	background: green;
+}
+.text2{
+	
+	background: red;
+}
+
+	
+</style>
+<script type="text/javascript">
+	function t(){
+		var div = document.getElementsByTagName('div')[0];
+		if(div.className.indexOf('text1') >=0){
+			div.className = 'text2';}
+			else{
+				div.className = 'text1';
+			}
+            div.style.width=parseInt(div.style.width)+5+'px';
+            div.style.height=parseInt(div.style.height)+5+'px';
+            div.style.borderBottomWidth=parseInt(div.style.borderBottomWidth)+1+'px';
+
+	}
+</script>
+</head>
+<body>
+<div class="text1" onclick="t();" style="width:300px;height:300px;border-bottom:1px solid black;">
+	点击DIV，使其背景色红绿交替
+	宽高增加5像素
+	下边框增粗1像素;
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    	<script type="text/javascript">
+
+
+    	</script>
+    	
+    </body>
+</html>

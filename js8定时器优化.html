@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title>定时器优化</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="布尔教育 http://www.itbool.com" />
+<script type="text/javascript">
+	function bang(){
+		
+		var inp=document.getElementsByName('time')[0];
+		
+		var time= parseInt(inp.value) - 1;
+		
+		inp.value = time;
+		
+		if (time==0) {
+			
+			document.getElementsByTagName('img')[0].src='2.jpg';
+			
+			clearInterval(clock);
+
+		};
+	}
+         
+         var clock =setInterval('bang()',1000)
+</script>
+</head>
+    <body>
+    	<h1>定时器</h1>
+    	<input type="button" name="time" value="5"/><br />
+    	<img src="1.jpg">
+    </body>
+</html>

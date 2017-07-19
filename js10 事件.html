@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title>边框变色事件</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="布尔教育 http://www.itbool.com" />
+<script>
+	function t1(){
+		document.getElementsByName('username')[0].style.border='1px solid red';
+	}
+	function t2(){
+		document.getElementsByName('username')[0].style.border='';
+
+	}
+</script>
+</head>
+    <body>
+
+    	<p>
+    		用户名:<input type="text" name="username" onfocus="t1();" onblur="t2()"/>
+    	</p>
+    	<p>
+    		Email:<input type="text" name="email"/>
+    	</p>
+     
+    </body>
+</html>

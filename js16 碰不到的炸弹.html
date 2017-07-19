@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title>抓不到的炸弹</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="布尔教育 http://www.itbool.com" />
+<style>
+	img{
+		width: 130px;
+		width: 130px;
+		position: relative;
+		left: 0px;
+		top: 0px;
+	}
+</style>
+</head>
+    <body>
+    	<img src="1.jpg">
+    </body>
+    <script type="text/javascript">
+    document.getElementsByTagName('img')[0].onmouseover =function(ev){
+    	this.style.left=ev.pageX+5+'px';
+    	this.style.top=ev.pageX+5+'px'; 
+    	
+    }
+    </script>
+</html>
