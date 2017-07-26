@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>homework</title>
+    <style type="text/css">
+    #first{
+        width:100px;
+        height:100px;
+        background:red;
+
+    }
+    #list{
+        width:800px;
+        height:520px;
+        border:1px solid black;
+        position:absolute;
+        top: 200px;
+        right:300px;
+        display:none;
+ }
+#lineone{
+    width:650px;
+    height:130px;
+    margin:30px auto;
+}
+#linetwo{
+    width:650px;
+    height:130px;
+    margin:30px auto;
+}
+#linethree{
+    width:650px;
+    height:130px;
+    margin:30px auto;
+}
+#bj{
+    height:90px;
+    width:100px;
+    margin-left:30px;
+    float:left;
+    font-size:30px;
+    font-weight:900;
+}
+#red{
+    height:90px;
+    width:100px;
+    margin-left:50px;
+    float:left;
+    background:red;
+    cursor:pointer;
+}
+#green{
+    height:90px;
+    width:100px;
+    margin-left:50px;
+    float:left;
+    background:green;
+    cursor:pointer;
+}
+#blue{
+    height:90px;
+    width:100px;
+    margin-left:50px;
+    float:left;
+    background:blue;
+    cursor:pointer;
+}
+#kd{
+    height:90px;
+    width:100px;
+    margin-left:30px;
+    float:left;
+     font-size:30px;
+    font-weight:900;
+}
+#wid1{
+    height:90px;
+    width:100px;
+    margin-left:50px;
+    float:left;
+    font-size:30px;
+    line-height:90px;
+    border:3px solid grey;
+    text-align:center;
+    cursor:pointer;
+}
+#wid2{
+    height:90px;
+    width:100px;
+    margin-left:50px;
+    float:left;
+    font-size:30px;
+    line-height:90px;
+    border:3px solid grey;
+    text-align:center;
+    cursor:pointer;
+}
+#wid3{
+    height:90px;
+    width:100px;
+    margin-left:50px;
+    float:left;
+    font-size:30px;
+    line-height:90px;
+    border:3px solid grey;
+    text-align:center;
+    cursor:pointer;
+}
+#gd{
+    height:90px;
+    width:100px;
+    margin-left:30px;
+    float:left;
+    font-size:30px;
+    font-weight:900;
+}
+#hei1{
+    height:90px;
+    width:100px;
+    margin-left:50px;
+    float:left;
+    font-size:30px;
+    line-height:90px;
+    border:3px solid grey;
+    text-align:center;
+    cursor:pointer;
+}
+#hei2{
+    height:90px;
+    width:100px;
+    margin-left:50px;
+    float:left;
+    font-size:30px;
+    line-height:90px;
+    border:3px solid grey;
+    text-align:center;
+    cursor:pointer;
+}
+#hei3{
+    height:90px;
+    width:100px;
+    margin-left:50px;
+    float:left;
+    font-size:30px;
+    line-height:90px;
+    border:3px solid grey;
+    text-align:center;
+    cursor:pointer;
+}
+
+#finish{
+    margin:20px 365px;
+    width:50px;
+    height:50px;
+}
+#wid1:hover{
+    background:#3385ff;
+    border:5px solid pink;
+    transition:All 0.6s ease-in-out;
+    -webkit-transition:All 0.6s ease-in-out;
+    -moz-transition:All 0.6s ease-in-out;
+    -o-transition:All 0.6s ease-in-out;
+    transform:scale(1.5);
+    -webkit-transform:scale(1.5);
+    -moz-transform:scale(1.5);
+    -o-transform:scale(1.5);
+    -ms-transform:scale(1.5);
+}
+#wid2:hover{
+    background:#3385ff;
+    border:5px solid pink;
+    transition:All 0.6s ease-in-out;
+    -webkit-transition:All 0.6s ease-in-out;
+    -moz-transition:All 0.6s ease-in-out;
+    -o-transition:All 0.6s ease-in-out;
+    transform:scale(1.5);
+    -webkit-transform:scale(1.5);
+    -moz-transform:scale(1.5);
+    -o-transform:scale(1.5);
+    -ms-transform:scale(1.5);
+}
+#wid3:hover{
+    background:#3385ff;
+    border:5px solid pink;
+    transition:All 0.6s ease-in-out;
+    -webkit-transition:All 0.6s ease-in-out;
+    -moz-transition:All 0.6s ease-in-out;
+    -o-transition:All 0.6s ease-in-out;
+    transform:scale(1.5);
+    -webkit-transform:scale(1.5);
+    -moz-transform:scale(1.5);
+    -o-transform:scale(1.5);
+    -ms-transform:scale(1.5);
+}
+#hei1:hover{
+    background:#3385ff;
+    border:5px solid pink;
+    transition:All 0.6s ease-in-out;
+    -webkit-transition:All 0.6s ease-in-out;
+    -moz-transition:All 0.6s ease-in-out;
+    -o-transition:All 0.6s ease-in-out;
+    transform:scale(1.5);
+    -webkit-transform:scale(1.5);
+    -moz-transform:scale(1.5);
+    -o-transform:scale(1.5);
+    -ms-transform:scale(1.5);
+}
+#hei2:hover{
+    background:#3385ff;
+    border:5px solid pink;
+    transition:All 0.6s ease-in-out;
+    -webkit-transition:All 0.6s ease-in-out;
+    -moz-transition:All 0.6s ease-in-out;
+    -o-transition:All 0.6s ease-in-out;
+    transform:scale(1.5);
+    -webkit-transform:scale(1.5);
+    -moz-transform:scale(1.5);
+    -o-transform:scale(1.5);
+    -ms-transform:scale(1.5);
+}
+#hei3:hover{
+    background:#3385ff;
+    border:5px solid pink;
+    transition:All 0.6s ease-in-out;
+    -webkit-transition:All 0.6s ease-in-out;
+    -moz-transition:All 0.6s ease-in-out;
+    -o-transition:All 0.6s ease-in-out;
+    transform:scale(1.5);
+    -webkit-transform:scale(1.5);
+    -moz-transform:scale(1.5);
+    -o-transform:scale(1.5);
+    -ms-transform:scale(1.5);
+}
+#red:hover{
+
+    transition:All 0.6s ease-in-out;
+    -webkit-transition:All 0.6s ease-in-out;
+    -moz-transition:All 0.6s ease-in-out;
+    -o-transition:All 0.6s ease-in-out;
+    transform:scale(1.5);
+    -webkit-transform:scale(1.5);
+    -moz-transform:scale(1.5);
+    -o-transform:scale(1.5);
+    -ms-transform:scale(1.5);
+}
+#green:hover{
+
+    transition:All 0.6s ease-in-out;
+    -webkit-transition:All 0.6s ease-in-out;
+    -moz-transition:All 0.6s ease-in-out;
+    -o-transition:All 0.6s ease-in-out;
+    transform:scale(1.5);
+    -webkit-transform:scale(1.5);
+    -moz-transform:scale(1.5);
+    -o-transform:scale(1.5);
+    -ms-transform:scale(1.5);
+}
+#blue:hover{
+
+    transition:All 0.6s ease-in-out;
+    -webkit-transition:All 0.6s ease-in-out;
+    -moz-transition:All 0.6s ease-in-out;
+    -o-transition:All 0.6s ease-in-out;
+    transform:scale(1.5);
+    -webkit-transform:scale(1.5);
+    -moz-transform:scale(1.5);
+    -o-transform:scale(1.5);
+    -ms-transform:scale(1.5);
+}
+#start{
+    height:40px;
+    width:40px;
+    margin-left:30px;
+    margin-top:20px;
+}
+
+</style>
+</head>
+<body>
+<div id="first"></div>
+<input id="start" type="button" name="" value="click">
+<div id="list">
+   <div id="lineone">
+       <div id="bj">背景：</div> <div id="red"></div><div id="green"></div><div id="blue"></div>
+
+   </div>
+
+   <div id="linetwo">
+   <div id="kd">宽度：</div> <div id="wid1">100px</div><div id="wid2">200px</div><div id="wid3">300px</div>
+   </div>
+
+   <div id="linethree">
+   <div id="gd">高度：</div> <div id="hei1">100px</div><div id="hei2">200px</div><div id="hei3">300px</div>
+   <input id="finish" type="button" name="" value="完成">
+   </div>
+</div>
+</body>
+<script type="text/javascript">
+     window.onload = function(){
+    document.getElementById('start')
+    document.getElementById('finish')
+    document.getElementById('first')
+    document.getElementById('list')
+    document.getElementById('red')
+    document.getElementById('green')
+    document.getElementById('blue')
+    document.getElementById('wid1')
+    document.getElementById('wid2')
+    document.getElementById('wid3')
+    document.getElementById('hei1')
+    document.getElementById('hei2')
+    document.getElementById('hei3')
+
+
+    start.onclick = function(){
+        list.style.display = 'block'
+    }
+    finish.onclick = function(){
+        list.style.display = 'none'
+    }
+    red.onclick = function(){
+        first.style.background = 'red'
+    }
+    green.onclick = function(){
+        first.style.background = 'green'
+    }
+    blue.onclick = function(){
+        first.style.background = 'blue'
+    }
+    wid1.onclick = function(){
+        first.style.width = '100px'
+    }
+    wid2.onclick = function(){
+        first.style.width = '200px'
+    }
+    wid3.onclick = function(){
+        first.style.width = '300px'
+    }
+    hei1.onclick = function(){
+        first.style.height = '100px'
+    }
+    hei2.onclick = function(){
+        first.style.height = '200px'
+    }
+    hei3.onclick = function(){
+        first.style.height = '300px'
+    }
+}
+</script>
+</html>
