@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>js 判断3</title>
+    <style type="text/css">
+
+    </style>
+    <script type="text/javascript">
+         window.onload=function(){
+            var otext=document.getElementById('text1');
+            var obtn=document.getElementById('btn1');
+            obtn.onclick=function(){
+               if (otext.value=='') {
+                alert('please write something')
+               }else if (otext.value=='css'){
+                alert('哥们，你写的是css，恭喜 通过！')
+               }
+               else if (otext.value=='javascript'){
+                alert('哥们，你写的是js，恭喜 通过！')
+               }
+               else if (otext.value=='js'){
+                alert('哥们，你写的是jq，恭喜 通过！')
+               }
+               else if (otext.value=='html'){
+                alert('哥们，你写的是html，恭喜 通过！')
+               }
+               else if (otext.value=='ajax'){
+                alert('哥们，你写的是css，恭喜 通过！')
+               }
+               else{
+                alert('不好意思 你输入的东西是:' + otext.value +   '  不能通过')
+               }
+            }
+         }
+    </script>
+</head>
+<body>
+通关口令：
+<input id="text1" type="text" name="">
+<input id="btn1" type="button" name="" value="验证">
+<!--css
+css
+html
+jq
+-->
+</body>
+</html>
