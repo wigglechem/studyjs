@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>js 两张图片切换代码</title>
+    <style type="text/css">
+
+
+
+    </style>
+</head>
+<body>
+<img id="img1" src="img/1.jpg" alt="">
+
+
+
+
+
+</body>
+<script type="text/javascript">
+     var oimg= document.getElementById('img1');
+     var onoff = true;
+     oimg.onclick=function(){
+        if (onoff){
+            oimg.src='img/3.jpg';
+            onoff= false;
+        }else{
+             oimg.src='img/1jpg';
+            onoff= true;
+        }
+     }
+
+
+
+</script>
+</html>
