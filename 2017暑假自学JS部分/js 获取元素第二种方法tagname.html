@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>js 获取元素第二种方法tagname</title>
+<style type="text/css">
+
+
+
+
+</style>
+</head>
+<body>
+
+
+
+
+
+
+
+</body>
+<script type="text/javascript">
+//document.body.innerHTML='abc';
+//document.title=123;
+var abtn = document.getElementsByTagName('input');
+//alert(abtn.length);
+document.body.innerHTML='<input type="button" value="按钮"><input type="button" value="按钮"><input type="button" value="按钮">';
+//alert(abtn.length);
+abtn[0].onclick=function(){
+    alert(1);
+}
+abtn[1].onclick=function(){
+    alert(2);
+}
+abtn[2].onclick=function(){
+    alert(3);
+}
+//重复执行某些代码 有数字在变 可以用循环！！
+
+</script>
+</html>

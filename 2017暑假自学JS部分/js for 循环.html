@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>js for 循环</title>
+   <style type="text/css">
+
+li{
+    height:30px;
+    border-bottom:1px solid #333;
+}
+
+   </style>
+</head>
+<body>
+<ul id="list">
+    <li></li>
+    <li></li>
+    <li></li>
+
+</ul>
+
+
+</body>
+<script type="text/javascript">
+var oul=document.getElementById('list');
+var ali= oul.getElementsByTagName('li');
+var arr=['today','tomorrow','the day after tomorrow']
+
+for(var i=0;i<ali.length;i++){
+ali[i].innerHTML=arr[i];
+ali[i].onclick=function(){alert(1);}
+}
+
+
+</script>
+</html>
