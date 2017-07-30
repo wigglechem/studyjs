@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>js 自动生成新闻</title>
+</head>
+<body>
+<input id="btn1" type="button" name="" value="自动生成5条新闻">
+<ul id="list">
+
+</ul>
+</body>
+<script type="text/javascript">
+var obtn=document.getElementById('btn1');
+var oul= document.getElementById('list');
+var onoff=true;
+
+obtn.onclick=function(){
+   // obtn.disabled = true;
+    //obtn.style.display='none';
+    //oul.innerHTML='';
+    if (onoff) {
+for(var i=0;i<arr.length;i++){
+    oul.innerHTML+='<li>'+ arr[i] +'</li>'
+    onoff= false;
+                             }
+
+                      }
+
+ };
+
+
+     var arr = [
+'建军90周年阅兵 习近平检阅部队并发表讲话',
+'李克强:取缔地条钢化解过剩产能要坚定不移',
+'歼20首次以战斗状态亮相 背后有何信息',
+'看完阅兵 告诉你解放军战斗力究竟什么水平',
+'阅兵后 这位歼16飞行员小哥被迷妹捕捉到'
+     ];
+
+</script>
+</html>

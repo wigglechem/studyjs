@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>js this指向及this应用</title>
+    <style type="text/css">
+
+    </style>
+    <script type="text/javascript">
+
+//alert(this);//object window
+//window 是js“老大”
+//window.alert(this)
+//this 指的是调用当前方法（函数）的那个对象
+function fn1(){
+    alert(this);
+}
+//window.fn1();
+</script>
+</head>
+<body>
+<input id="btn1" type="button" name="" value="按钮">
+<script type="text/javascript">
+
+     var obtn=document.getElementById('btn1');
+     obtn.onclick= fn1;
+</script>
+</body>
+
+</html>

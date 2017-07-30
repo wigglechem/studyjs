@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>css text</title>
+    <style type="text/css">
+div{
+
+    border:1px solid #333;
+}
+
+
+    </style>
+</head>
+<body>
+<div id="div1">
+123
+</div>
+<input id="btn1" type="button" name="" value="按钮">
+</body>
+<script type="text/javascript">
+var odiv=document.getElementById('div1');
+var obtn=document.getElementById('btn1');
+odiv.onclick=function(){
+    //odiv.style.width='200px'
+    odiv.style.cssText='width:200px;height:200px;';
+    obtn.onclick=function(){
+        odiv.style.cssText='width:100px';
+    }
+}
+</script>
+</html>

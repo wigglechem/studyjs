@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title> js for循环计算元素坐标</title>
+    <style type="text/css">
+        div{
+            width:50px;
+            height:50px;
+            background:red;
+            position:absolute;
+            top: 0;
+            left:0;
+            font-size:30px;
+            text-align:center;
+            line-height:50px;
+            color:white;
+        }
+
+    </style>
+
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+var adiv=document.getElementsByTagName('div');
+            for(var i=0;i<11;i++){
+            document.body.innerHTML += '<div>'+i+'</div>'
+
+}
+
+for(var i=0;i<adiv.length;i++){
+     adiv[i].style.left=10+i*60+'px';
+     adiv[i].style.top=10+i*60+'px';
+
+}
+
+
+    </script>
+</html>
