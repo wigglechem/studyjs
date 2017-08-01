@@ -5,9 +5,10 @@
     <title>js 添加索引值2</title>
     <script type="text/javascript">
          window.onload=function(){
-            var arr=['Martin','steven','wiggle'];
-            var abtn=document.getElementsByTagName('input');
 
+            var abtn=document.getElementsByTagName('input');
+            var ap=document.getElementsByTagName('p');
+            var arr=['Martin','steven','wiggle'];
             for(var i=0;i<abtn.length;i++){
 
                 abtn[i].a=i //添加索引值
@@ -16,6 +17,7 @@
 
                   //alert(arr[this.a])
                   this.value=arr[this.a];
+                  ap[this.a].innerHTML=arr[this.a];
                 }
             }
          }
@@ -26,8 +28,8 @@
 <input type="button" name="" value="btn1">
 <input type="button" name="" value="btn2">
 <input type="button" name="" value="btn3">
-<p></p>
-<p></p>
-<p></p>
+<p>A</p>
+<p>B</p>
+<p>C</p>
 </body>
 </html>

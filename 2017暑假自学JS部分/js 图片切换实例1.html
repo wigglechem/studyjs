@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>js 图片切换实例1</title>
+    <style type="text/css">
+body{
+    background:#333;
+    }
+ul{
+    padding:0;
+    margin:0;
+}
+li{
+    list-style:none;
+}
+#pic{
+    background:url('img/loading.gif') no-repeat center #000;
+    width:400px;
+    height:500px;
+    position:relative;
+    margin:0 auto;
+}
+#pic img{
+    width:400px;
+    height:500px;
+}
+#pic ul{
+    width:40px;
+    position:absolute;
+    top:0;
+    right:-50px;
+
+}
+#pic li{
+    width:40px;
+    height:40px;
+    margin-bottom:4px;
+    background:#666;
+}
+#pic .active{
+    background:#fc3;
+}
+#pic span{
+    top: 14px;
+}
+#pic p{
+    bottom:0;
+    margin:0;
+}
+#pic p,#pic span{
+    position:absolute;
+    left:0;
+    width:400px;
+    height:30px;
+    line-height:30px;
+    text-align:center;
+    color:#fff;
+}
+    </style>
+    <script type="text/javascript">
+     window.onload=function(){
+
+        var odiv  = document.getElementById('pic');
+        var oimg  = odiv.getElementsByTagName('img')[0];
+        var ospan = odiv.getElementsByTagName('span')[0];
+        var op    = odiv.getElementsByTagName('p')[0];
+        var oul   = odiv.getElementsByTagName('ul')[0];
+        var oli   = odiv.getElementsByTagName('li');
+
+        var arrurl  =['img/1.jpg','img/2.jpg','img/3.jpg','img/4.jpg'];
+        var arrtext =['建军 90 周年','5周年庆典','谢师宴','城市日落美景'];
+        var num     = 0;
+        var oldli   = null;
+
+        for (var i = 0; i < arrurl.length; i++ ) {
+            oul.innerHTML += '<li></li>';
+        };
+
+        oldli = oli[num];
+
+        //初始化
+
+        oimg.src = arrurl[num];
+        ospan.innerHTML = 1 + num + '/'+ arrurl.length;
+        op.innerHTML    = arrtext[num];
+        oli[num].className = 'active';
+
+        for (var i = 0; i < oli.length ; i++ ) {
+            oli[i].index = i;  //索引值
+            oli[i].onclick = function(){
+            oimg.src = arrurl[this.index];
+            op.innerHTML = arrtext[this.index];
+            ospan.innerHTML = 1 + this.index + '/' + arrurl.length;
+
+            //颜色跟着走
+            //思路一：全部清空，当前添加
+
+            /*
+            for (var i = 0; i < oli.length; i++ ) {
+                oli[i].className='';
+            };
+
+            this.className='active'
+            */
+
+            //思路二：清空当个，当前添加
+
+            oldli.className = ''
+            oldli = this;
+            this.className = 'active';
+
+
+
+            }
+        };
+
+
+    }
+    </script>
+</head>
+<body>
+<div id="pic">
+    <img src="" alt="">
+    <span>数量正在加载中......</span>
+    <p>文字说明正在加载中......</p>
+    <ul>
+
+    </ul>
+</div>
+
+
+
+
+</body>
+</html>
