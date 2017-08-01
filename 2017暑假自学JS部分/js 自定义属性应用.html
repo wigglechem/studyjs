@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>js 自定义属性应用</title>
+    <style type="text/css">
+        li{
+            list-style:none;
+            width:114px;
+            height:140px;
+            background:url(img/4.jpg);
+            float:left;
+            margin-right:20px;
+        }
+
+
+    </style>
+
+
+    <script type="text/javascript">
+         window.onload=function(){
+            //var onoff=true; 只能控制一组
+      var ali=document.getElementsByTagName('li');
+      for(var i=0;i<ali.length;i++){
+      ali[i].onoff=true;
+      ali[i].onclick=function(){
+
+      if (this.onoff) {
+           this.style.background='url(img/1.jpg)';
+           this.onoff=false;
+
+     }else{
+          this.style.background='url(img/4.jpg)';
+        this.onoff=true;
+}
+ }
+  }
+   }
+
+</script>
+</head>
+<body>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+
+</ul>
+</body>
+</html>

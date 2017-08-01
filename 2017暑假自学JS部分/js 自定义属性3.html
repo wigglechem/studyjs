@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>js 自定义属性3</title>
+    <style type="text/css">
+
+
+
+    </style>
+    <script type="text/javascript">
+         window.onload=function(){
+           var abtn = document.getElementsByTagName('input');
+           var arr =['a','b','c','d'];
+           for(var i=0;i<abtn.length;i++){
+        abtn[i].num= 0;
+        abtn[i].onclick=function(){
+            this.value=arr[this.num]
+            this.num++;
+            if (this.num==arr.length) {this.num=0;};
+        }
+         }
+          }
+
+    </script>
+</head>
+<body>
+
+<input type="button" name="" value="0">
+<input type="button" name="" value="0">
+<input type="button" name="" value="0">
+
+
+
+</body>
+</html>

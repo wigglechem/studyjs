@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>js 添加索引值2</title>
+    <script type="text/javascript">
+         window.onload=function(){
+            var arr=['Martin','steven','wiggle'];
+            var abtn=document.getElementsByTagName('input');
+
+            for(var i=0;i<abtn.length;i++){
+
+                abtn[i].a=i //添加索引值
+
+                abtn[i].onclick=function(){
+
+                  //alert(arr[this.a])
+                  this.value=arr[this.a];
+                }
+            }
+         }
+
+    </script>
+</head>
+<body>
+<input type="button" name="" value="btn1">
+<input type="button" name="" value="btn2">
+<input type="button" name="" value="btn3">
+<p></p>
+<p></p>
+<p></p>
+</body>
+</html>
