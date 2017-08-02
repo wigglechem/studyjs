@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>js 实例 qq实现折叠与展开</title>
+    <style type="text/css">
+ul,h2{
+    padding:0;
+    margin:0;
+}
+li{
+    list-style:none;
+}
+#list{
+    margin:0 auto;
+    width:240px;
+    border:1px solid #333;
+}
+#list ul .hover{background:#6fc}
+#list .lis{
+
+}
+#list h2{
+    background:url(img/right.png )no-repeat 5px center #6ff;
+    height:30px;
+    line-height:30px;
+    text-indent:20px;
+    color:#000;
+}
+#list ul{
+    display:none;
+}
+#list ul li{
+    line-height:24px;
+    border-bottom:1px solid #333;
+    text-indent:24px;
+}
+#list .active{
+    background:url(img/down.png )no-repeat 5px center #ff9;
+}
+    </style>
+    <script type="text/javascript">
+     window.onload = function(){
+        var oul   = document.getElementById('list');
+        var ah2   = oul.getElementsByTagName('h2');
+        var aul   = oul.getElementsByTagName('ul');
+        var ali   = null;
+        var arrli = [];
+
+
+        for (var i = 0; i < ah2.length; i++ ) {
+            ah2[i].index = i;
+            ah2[i].onclick = function(){
+
+                if (this.className=='') {
+                aul[this.index].style.display = 'block';
+                this.className = 'active';
+               }else {
+                aul[this.index].style.display = 'none';
+                this.className = '';
+            }
+             }
+        };
+
+ for (var i = 0; i < aul.length; i++) {
+           ali = aul[i].getElementsByTagName('li');
+           for (var j = 0; j < ali.length; j++ ) {
+            arrli.push(ali[j]);
+ }
+}
+            for(var i=0;i<arrli.length;i++){
+                arrli[i].onclick=function(){
+                    for (var i = 0; i < arrli.length; i++) {
+                        arrli[i].className='';
+                    };
+                    this.className='hover';
+                }
+
+            }
+
+
+
+     }
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+<ul id="list">
+    <li class="lis">
+        <h2>我的好友</h2>
+        <ul>
+            <li>张三</li>
+            <li >李四</li>
+            <li>陈五</li>
+            <li>孙六</li>
+        </ul>
+    </li>
+    <li class="lis">
+        <h2>企业好友</h2>
+        <ul>
+            <li>马化腾</li>
+            <li>马云</li>
+            <li>罗永浩</li>
+            <li>李彦宏</li>
+        </ul>
+    </li>
+    <li class="lis">
+        <h2>黑名单</h2>
+        <ul>
+            <li>张小三</li>
+            <li>李小四</li>
+            <li>奥斯卡</li>
+            <li>玛帝国</li>
+        </ul>
+
+    </li>
+
+</ul>
+
+
+
+
+
+</body>
+</html>
