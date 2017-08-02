@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>js parseInt和parseFloat数据类型转换</title>
+    <script type="text/javascript">
+
+         var a = '100px';
+         //alert(parseInt(a)); //100
+
+         var b = '-100';
+         //alert(parseInt(b)); //-100
+
+         var c = '12.78元';
+         //alert(parseInt(c)); //12
+
+         var d = '12.78元';
+         //alert(parseFloat(d)); //12.78
+
+         var d = '12.7.8元';
+         //alert(parseFloat(d)); //12.7
+
+         var b = '-100';
+         //alert(parseInt(b,10)); //-100 按照十进制
+
+         var num = '200.345';
+         if(parseInt(num) ==parseFloat(num)){
+        alert(num + '是整数');
+         }else{
+            alert(num+'是小数');
+         }
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
