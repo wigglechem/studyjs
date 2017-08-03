@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>js 函数传参应用2</title>
+        <style type="text/css">
+body{
+    background:#333;
+    }
+ul{
+    padding:0;
+    margin:0;
+}
+li{
+    list-style:none;
+}
+.box{
+    background:url('img/loading.gif') no-repeat center #000;
+    width:400px;
+    height:500px;
+    position:relative;
+    float: left;
+    margin-right: 70px;
+}
+.box img{
+    width:400px;
+    height:500px;
+}
+.box ul{
+    width:40px;
+    position:absolute;
+    top:0;
+    right:-50px;
+
+}
+.box li{
+    width:40px;
+    height:40px;
+    margin-bottom:4px;
+    background:#666;
+}
+.box .active{
+    background:#fc3;
+}
+.box span{
+    top: 14px;
+}
+.box p{
+    bottom:0;
+    margin:0;
+}
+.box p,.box span{
+    position:absolute;
+    left:0;
+    width:400px;
+    height:30px;
+    line-height:30px;
+    text-align:center;
+    color:#fff;
+}
+    </style>
+    <script type="text/javascript">
+              window.onload=function(){
+                fntab('pic1','onclick');
+                fntab('pic2','onmouseover');
+
+              }
+
+
+
+
+              function fntab(id,evt){
+
+        var odiv  = document.getElementById(id);
+        var oimg  = odiv.getElementsByTagName('img')[0];
+        var ospan = odiv.getElementsByTagName('span')[0];
+        var op    = odiv.getElementsByTagName('p')[0];
+        var oul   = odiv.getElementsByTagName('ul')[0];
+        var oli   = odiv.getElementsByTagName('li');
+
+        var arrurl  =['img/1.jpg','img/2.jpg','img/3.jpg','img/4.jpg'];
+        var arrtext =['建军 90 周年','5周年庆典','谢师宴','城市日落美景'];
+        var num     = 0;
+        var oldli   = null;
+
+        for (var i = 0; i < arrurl.length; i++ ) {
+            oul.innerHTML += '<li></li>';
+        };
+
+        oldli = oli[num];
+
+        //初始化
+        function fntab(){
+            oimg.src = arrurl[num];
+        ospan.innerHTML = 1 + num + '/'+ arrurl.length;
+        op.innerHTML    = arrtext[num];
+
+        oli[num].className = 'active';
+    }
+        fntab();
+
+        for (var i = 0; i < oli.length ; i++ ) {
+            oli[i].index = i;  //索引值
+            oli[i][evt] = function(){
+
+            num = this.index;
+
+            fntab();
+
+            //颜色跟着走
+            //思路一：全部清空，当前添加
+
+            /*
+            for (var i = 0; i < oli.length; i++ ) {
+                oli[i].className='';
+            };
+
+            this.className='active'
+            */
+
+            //思路二：清空当个，当前添加
+
+            oldli.className = ''
+            oldli = this;
+            oli[num].className = 'active';
+
+
+
+            }
+        };
+
+
+    }
+
+
+
+
+
+    </script>
+</head>
+<body>
+<div id="pic1" class="box">
+    <img src="" alt="">
+    <span>数量正在加载中......</span>
+    <p>文字说明正在加载中......</p>
+    <ul>
+
+    </ul>
+</div>
+
+
+<div id="pic2" class="box">
+    <img src="" alt="">
+    <span>数量正在加载中......</span>
+    <p>文字说明正在加载中......</p>
+    <ul>
+
+    </ul>
+</div>
+
+
+
+</body>
+</html>

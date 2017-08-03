@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>js 函数传参应用实例3</title>
+    <script type="text/javascript">
+window.onload=function(){
+  var oul=document.getElementById('list');
+  var ali=oul.getElementsByTagName('li');
+  var abtn=oul.getElementsByTagName('input');
+  for(var i = 0;i<ali.length;i++){
+     fn1(ali[i]);
+  }
+
+
+
+
+
+  function fn1(oli){
+   var abtn=oli.getElementsByTagName('input');
+   var ostrong=oli.getElementsByTagName('strong')[0];
+   var oem=oli.getElementsByTagName('em')[0];
+   var ospan=oli.getElementsByTagName('span')[0];
+   var n1=Number(ostrong.innerHTML);
+   var n2 = parseFloat(oem.innerHTML);
+
+   abtn[0].onclick=function(){
+    n1 --;
+    if (n1<0) {n1=0};
+    ostrong.innerHTML=n1;
+    ospan.innerHTML=n1*n2+'元';
+
+    };
+
+
+    abtn[1].onclick=function(){
+    n1 ++;
+    ostrong.innerHTML=n1;
+    ospan.innerHTML=n1*n2+'元';
+
+    };
+  }
+
+
+
+
+}
+
+
+
+    </script>
+</head>
+<body>
+<ul id="list">
+    <li>
+        <input type="button" value="-">
+        <strong>0</strong>
+        <input type="button" value="+">
+        单价：<em>12.5元</em>
+        小计：<span>0元</span>
+     </li>
+     <li>
+        <input type="button" value="-">
+        <strong>0</strong>
+        <input type="button" value="+">
+        单价：<em>10.5元</em>
+        小计：<span>0元</span>
+     </li>
+     <li>
+        <input type="button" value="-">
+        <strong>0</strong>
+        <input type="button" value="+">
+        单价：<em>8.5元</em>
+        小计：<span>0元</span>
+     </li>
+
+</ul>
+<p>商品合计共： 0 件，共花费了： 0 元 <br>
+   其中最贵的商品单价是： 0 元
+
+
+
+</p>
+</body>
+</html>

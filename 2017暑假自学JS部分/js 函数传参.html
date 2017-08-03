@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>js 函数传参</title>
+    <script type="text/javascript">
+        /* 函数传参
+           参数=js的数据类型：
+           数字、字符串、布尔、函数、对象、未定义
+
+
+
+
+                  */
+
+        //fn1(100,'px');
+        //function fn1(a,b){
+            //alert(a+b);
+       // }
+
+       /* fn2('chen');
+        fn2('zhiwei');
+        function fn2(a){
+            alert(a.charAt(2));
+        } */
+
+
+       /* fn3(function(a){alert(a)});
+        function fn3(fn){
+fn(100);
+        } */
+
+
+fn5(window,document);
+function fn5(w,d){
+    w.onload=function(){
+        d.body.innerHTML=123;
+    }
+}
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
