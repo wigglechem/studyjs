@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>js arguments</title>
+    <script type="text/javascript">
+
+           /*
+           this
+            return
+            arguments
+            event
+            ......
+            */
+/* fn1(1,2,3);      //实参
+        // function fn1(a,b,c){    //形参 ,abc这些代表123
+        function fn1(){
+       alert(arguments[arguments.length-1]);
+
+        }
+ */
+
+   var a =1 ;
+   function fn2(a){
+    arguments[0]=3;   //3
+    alert(a);
+    var a = 2;
+    alert(arguments[0]);//2
+   }
+  fn2(a);
+  alert(a); //1
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
