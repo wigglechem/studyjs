@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>js 反选 简便方法不用if</title>
+    <script type="text/javascript">
+         window.onload=function(){
+            var oinp = document.getElementsByTagName('input');
+            oinp[0].onclick=function(){
+            for(var i = 1;i<oinp.length;i++){
+                oinp[i].checked=!oinp[i].checked
+            }
+
+
+
+            }
+         }
+
+
+
+    </script>
+</head>
+<body>
+<input type="button" name="" value="反选">
+<ul>
+    <li><input type="checkbox" name=""></li>
+    <li><input type="checkbox" name=""></li>
+    <li><input type="checkbox" name=""></li>
+    <li><input type="checkbox" name=""></li>
+</ul>
+</body>
+</html>
