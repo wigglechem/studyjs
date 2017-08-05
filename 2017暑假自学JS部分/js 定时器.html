@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+
+    <script type="text/javascript">
+         /* 定时器：时间概念
+           var timer = setInterval(函数，毫秒);  重复执行 像发动机
+            clearInterval(timer);   清楚
+              var timer= setTimeout(函数，毫秒); 执行一次  像炸弹
+           */
+
+  /* for (var 0; i < 3; i++) {
+       document.title = i;
+
+   };         */                     //瞬间完成，没有时间根据
+
+     i=0;
+     var timer = null;
+     function fn1(){
+        document.title = i;
+        i++;
+        if(i===11){
+     clearInterval(timer)
+        }
+     }
+  timer   =    setInterval(fn1,1000);
+      //fn1();//直接调用
+      //document.onclick = fn1;
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

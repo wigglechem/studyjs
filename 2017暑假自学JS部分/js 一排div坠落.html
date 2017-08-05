@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>js 一排div坠落</title>
+    <style type="text/css">
+
+
+
+
+
+
+    </style>
+    <script src="domove.js"></script>
+    <script type="text/javascript">
+     window.onload=function(){
+       var str = '';
+       var len = 20;
+       var adiv=document.getElementsByTagName('div');
+       var timer= null;
+       var num=0;
+       for (var i = 0; i < len; i++) {
+        str += '<div style="width:50px;height:50px;background:red;position:absolute;top:0px;left:'+i*60+'px;"></div>'
+       };
+         document.body.innerHTML = str;
+        document.onclick=function(){
+            clearInterval(timer);
+            timer=setInterval(function(){
+                domove(adiv[num],'top',23,500);
+                num++;
+                if(num===len){
+                    clearInterval(timer);
+                }
+            },100)
+
+        }
+     }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

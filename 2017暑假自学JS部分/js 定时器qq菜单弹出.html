@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>js 定时器qq菜单弹出</title>
+    <style type="text/css">
+        #qq{
+            width:200px;
+            height:400px;
+            background:#f9c;
+        }
+        #title{
+            width:240px;
+            height:180px;
+            background:#fc6;
+            position:absolute;
+            top: 10px;
+            left:220px;
+            display:none;
+
+        }
+    </style>
+    <script type="text/javascript">
+     window.onload=function(){
+       var oqq= document.getElementById('qq');
+       var otitle = document.getElementById('title');
+       var timer= null;
+
+       oqq.onmouseover=show;
+       oqq.onmouseout = hide;
+       title.onmouseover=show;
+       title.onmouseout=hide;
+
+        function show(){
+            clearInterval(timer);
+            otitle.style.display= 'block';
+        }
+
+         function hide(){
+            timer = setTimeout(function(){
+                otitle.style.display= 'none';
+            },200)
+
+        }
+
+
+
+
+
+     }
+    </script>
+</head>
+<body>
+<div id="qq"></div>
+<div id="title"></div>
+
+</body>
+</html>

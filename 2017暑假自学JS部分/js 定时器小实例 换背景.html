@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>js 定时器小实例 换背景</title>
+
+</head>
+<body>
+<input type="button" name="" value="换背景吧">
+<input type="button" name="" value="停！！！">
+</body>
+<script type="text/javascript">
+     var abtn = document.getElementsByTagName('input');
+     var arrurl = ['img/1.jpg','img/2.jpg','img/3.jpg','img/4.jpg'];
+     var num = 0;
+     var obody=document.body;
+     var timer = 0;
+     abtn[0].onclick=function(){
+
+        clearInterval(timer);//null、未定义
+
+
+         timer = setInterval(function(){
+         obody.style.background='url('+arrurl[num]+')';
+         num++;
+         num%=arrurl.length;
+
+         },1000)
+
+     }
+    abtn[1].onclick=function(){
+        clearInterval(timer)
+    }
+
+
+
+
+
+</script>
+</html>

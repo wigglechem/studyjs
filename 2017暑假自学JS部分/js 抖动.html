@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>js 抖动</title>
+    <style type="text/css">
+    img{
+        position:absolute;
+        top:200px;
+        left:300px;
+        width:200px;
+    }
+    </style>
+    <script src="domove.js"></script>
+    <script type="text/javascript">
+     window.onload=function(){
+      var oimg=document.getElementById('img1');
+
+
+
+      oimg.onclick=function(){
+        shake(oimg,'left',function(){
+            shake(oimg,'top')
+        });
+      }
+
+     }
+
+
+function shake(obj,attr,endFn){
+    var pos=parseInt(getStyle(obj,attr));
+        var arr=[];
+
+        var num= 0;
+        for(var i = 20;i>0;i-=2){
+         arr.push(i,-i);
+        }
+        arr.push(0);
+        clearInterval(obj.shake);
+        obj.shake=setInterval(function(){
+             obj.style[attr]=pos + arr[num] + 'px';
+             num++;
+             if(num===arr.length){
+               clearInterval(obj.shake);
+               endFn&&endFn()
+             }
+
+
+
+        },50)
+}
+
+
+    </script>
+</head>
+<body>
+<img id="img1" src="img/1.jpg" alt="">
+</body>
+</html>
