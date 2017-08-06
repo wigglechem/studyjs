@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>js 图片时间</title>
+    <style type="text/css">
+
+
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function(){
+          var op=document.getElementById("time");
+          var aimg=document.getElementsByTagName("img");
+
+
+          var obody = document.body;
+          setInterval(fntime,1000)
+          fntime();
+
+
+          function fntime(){
+        var mytime = new Date();
+
+        var ihours  = mytime.getHours();
+        var imin  = mytime.getMinutes();
+        var isec  = mytime.getSeconds();
+        var str = totwo(ihours)+''+totwo(imin)+''+totwo(isec);
+
+
+         op.innerHTML = str;
+
+             aimg[0].src='time/'+str.charAt(0)+'.jpg';
+             aimg[1].src='time/'+str.charAt(1)+'.jpg';
+             aimg[2].src='time/colon.jpg';
+             aimg[3].src='time/'+str.charAt(2)+'.jpg';
+             aimg[4].src='time/'+str.charAt(3)+'.jpg';
+             aimg[5].src='time/colon.jpg';
+             aimg[6].src='time/'+str.charAt(4)+'.jpg';
+             aimg[7].src='time/'+str.charAt(5)+'.jpg';
+
+
+     }
+
+
+        }
+
+        function totwo(n){
+          if(n<10){
+           return '0'+n;
+          }else{
+
+            return ''+n;
+          }
+
+
+        }
+
+
+
+    </script>
+</head>
+<body>
+<p id="time" style="font-size:60px"></p>
+<img src="time/0.jpg" alt="">
+<img src="time/0.jpg" alt="">
+<img src="time/colon.JPG" alt="">
+<img src="time/0.jpg" alt="">
+<img src="time/0.jpg" alt="">
+<img src="time/colon.JPG" alt="">
+<img src="time/0.jpg" alt="">
+<img src="time/0.jpg" alt="">
+
+
+</body>
+</html>

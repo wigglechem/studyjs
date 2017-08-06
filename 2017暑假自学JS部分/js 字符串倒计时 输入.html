@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>js 字符串倒计时 输入</title>
+    <style type="text/css">
+        .t1{width:500px;}
+
+
+    </style>
+    <script type="text/javascript">
+    window.onload=function(){
+     var ainp = document.getElementsByTagName('input');
+     var inow = null;
+     var inew = null;
+     var t = 0;
+     var str = '';
+     var timer = null;
+     ainp[2].onclick=function(){
+        inew= new Date(ainp[0].value);
+        clearInterval(timer);
+
+    timer=setInterval(function(){
+        inow= new Date();
+        t = Math.floor((inew-inow)/1000);
+        if (t>=0) {
+            str = Math.floor(t/86400)+'天'+Math.floor(t%86400/3600)+'时'+Math.floor(t%86400%3600/60)+'分'+t%60+'秒';
+        ainp[1].value=str;
+    }else{
+        clearInterval(timer);
+    }
+
+    },1000)
+
+
+
+     }
+
+
+
+    }
+
+
+    </script>
+</head>
+<body>
+距离： <input class="t1" type="text" name="" value="August 10,2017 21:56:0"><br>
+还剩： <input class="t1" type="text" name="">
+<input type="button" name="" value="开始倒计时吧">
+
+</body>
+</html>
