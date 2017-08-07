@@ -11,7 +11,7 @@
          //现在的时间点 （在变）
          //未来的时间点 （不变）
          var inow = new Date();
-         var inew = new Date(2017, 7,9, 21,56,0);
+         var inew = new Date(2017, 7,9, 21,56,0);//要注意月份要比真实的减一
          var t = Math.floor((inew-inow)/1000); //毫秒
 
          var str =Math.floor(t/86400)+'天'+Math.floor(t%86400/3600)+'时'+Math.floor(t%86400%3600/60)+'分'+t%60+'秒';

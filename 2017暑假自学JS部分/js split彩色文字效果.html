@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>js split彩色文字效果</title>
+    <style type="text/css">
+        div{
+            width:300px;
+            height:200px;
+            border:1px solid #333;
+            background:#fff;
+            padding:20px;
+            line-height:40px;
+        }
+
+        span{
+            padding:5px 15px;
+            font-family:微软雅黑;
+        }
+    </style>
+    <script type="text/javascript">
+
+
+    </script>
+</head>
+<body>
+<div id="div1">
+<!--<span style="background: #FFC;">文</span><span style="background: #CCC;">字</span><span style="background: #6FC;">内</span><span style="background: #9C9;">容</span>-->
+
+
+</div>
+
+<input type="text" name="">
+<input type="button" name="" value="按钮">
+
+<script type="text/javascript">
+   var odiv= document.getElementById('div1');
+   var ainp=document.getElementsByTagName('input');
+   var arrcolor=['#ffc','#cc3','#6fc','#9c9']
+
+   ainp[1].onclick=function(){
+    var str = ainp[0].value;
+    var arr= str.split('');
+    for(var i = 0;i<arr.length;i++){
+        arr[i]='<span style="background:'+arrcolor[i%arrcolor.length]+';">'+arr[i]+'</span>';
+    }
+    odiv.innerHTML+=arr.join('');
+   }
+</script>
+</body>
+</html>

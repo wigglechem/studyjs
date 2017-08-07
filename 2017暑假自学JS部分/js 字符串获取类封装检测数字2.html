@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>js 字符串获取类封装检测数字2</title>
+    <script type="text/javascript">
+
+
+
+
+    </script>
+</head>
+<body>
+<script type="text/javascript">
+     /*
+
+     document.body.innerHTML = String.fromCharCode(22938);
+     document.body.innerHTML += String.fromCharCode(21938);
+
+     */
+
+    var str='';
+    for (var i = 600;i<5000;i++){
+        str += String.fromCharCode(i)+'';
+    }
+
+    document.body.innerHTML = str;
+</script>
+</body>
+</html>

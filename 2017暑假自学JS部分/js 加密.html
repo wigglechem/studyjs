@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>js 加密</title>
+</head>
+<body>
+<input type="text" name="">
+<input type="button" name="" value="加密">
+<div id="div1">
+加密......
+
+</div>
+<script type="text/javascript">
+     var ainp = document.getElementsByTagName('input');
+     var odiv = document.getElementById('div1');
+
+     ainp[1].onclick=function(){
+     var str=ainp[0].value;
+     var str1 ='';
+     for(var i = 0;i<str.length;i++){
+    str1+=String.fromCharCode(str.charCodeAt(i)+100000)+':';
+     }
+     odiv.innerHTML=str1;
+     }
+</script>
+</body>
+</html>

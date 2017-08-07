@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>js 字符串获取类封装检测数字</title>
+    <style type="text/css">
+
+
+
+    </style>
+    <script type="text/javascript">
+         //var str = '  妙味课堂';//空格也算长度
+         //   alert(str.length)
+         //   alert(str.charAt())//默认第一个
+         //   alert((str.charAt(12)))//如果超出字符串长度，那么alert出来就是空 不是undefined；
+         //   alert(str.charCodeAt()); //计算机中的代码位置 0~9 48~57 a~z 97~122 A~Z 65~90
+         //   alert(String.fromCharCode(22937,21619));//弹出字符 “妙味”
+
+
+
+
+
+    </script>
+</head>
+<body>
+<input type="text" name="">
+<input type="button" name="" value="检测">
+<script type="text/javascript">
+     //alert(detectnun('123456'))
+     var ainp=document.getElementsByTagName('input');
+
+     ainp[1].onclick=function(){
+        var val=ainp[0].value
+
+        if (detectnun(val)&&val!=='') {
+            alert('恭喜，'+val+'全是数字');
+        }else {
+            alert('输入有误')
+        }
+     }
+     function detectnun (str){
+        var n = null;
+   for(var i = 0;i<str.length;i++){
+    n=str.charCodeAt(i);
+    if (n<48||n>57) return false;
+   }
+  return true;
+
+
+     }
+
+
+
+</script>
+</body>
+</html>
