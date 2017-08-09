@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>js 关于数组的一些问题</title>
+    <script type="text/javascript">
+         //var arr= [1,2,3];
+         //alert(arr.push('abc'))//4 push 返回值是数组长度
+         //arr.unshift(0);//unshift 往前开始塞东西
+         //alert(arr)
+
+         var arr = ['Martin','Steven','Jason','Kitty'];
+        /*
+         arr.pop(); //删除最后一个 他的返回值就是删除的那个
+         arr.shift();//删除第一个；
+         alert(arr);
+        */
+       arr.unshift(arr.pop());//把最后一个放到第一个
+
+       arr.push(arr.shift());//把第一个放最后一个
+    </script>
+</head>
+<body>
+
+</body>
+</html>
