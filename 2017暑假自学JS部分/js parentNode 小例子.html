@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>js parentNode 小例子</title>
+</head>
+<body>
+<ul>
+    <li><a href="#">隐藏111</a></li>
+    <li><a href="#">隐藏222</a></li>
+    <li><a href="#">隐藏333</a></li>
+    <li><a href="#">隐藏444</a></li>
+</ul>
+<script type="text/javascript">
+     var a = document.getElementsByTagName('a');
+
+     for (var i = 0;i<a.length;i++){
+        a[i].onclick = function(){
+            this.parentNode.style.display='none'
+        }
+     }
+</script>
+</body>
+</html>

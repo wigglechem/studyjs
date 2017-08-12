@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>js DOM nodetype 结点应用</title>
+    <style type="text/css">
+        li{
+            width:20px;
+            height:30px;
+            background:red;
+            margin:5px;
+            transition:1s;
+        }
+    </style>
+
+</head>
+<body>
+<ul id="ul">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <script type="text/javascript">
+         var ul = document.getElementById('ul');
+         var lis = ul.childNodes;
+         document.onclick=function(){
+            for(var i = 0;i<lis.length;i++){
+                if (lis[i].nodeType === 1) {
+                     lis[i].style.width='150px';
+                };
+
+            }
+         }
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>js 节点例子</title>
+    <style type="text/css">
+        ul{
+            width:200px;
+        }
+        ul li{
+            color:#666;
+            background-color:#eee;
+            font-weight:bold;
+            font-size:14px;
+            height:30px;
+            line-height:30px;
+            padding:0 20px;
+            list-style:none;
+            text-align:center;
+        }
+        ul .focus{
+            font-size:22px;
+            background-color:#555;
+            color:#fff;
+        }
+        ul .near{
+            font-size:18px;
+            background-color:#ccc;
+            color:blue;
+        }
+        ul .none{
+            background:#333;
+            color:#fff;
+        }
+        ul .side{
+            background:orange;
+        }
+    </style>
+</head>
+<body>
+<ul id="ul1">
+
+    <li class="none">这是首行</li>
+
+    <li>111111</li>
+    <li>222222</li>
+    <li>333333</li>
+    <li>444444</li>
+    <li>555555</li>
+    <li>666666</li>
+    <li>111111</li>
+    <li>222222</li>
+    <li>333333</li>
+    <li>444444</li>
+    <li>555555</li>
+
+    <li class="none">这是末行</li>
+</ul>
+
+<script type="text/javascript">
+     var ul = document.getElementById('ul1');
+     var li = ul.children;
+     var first = ul.firstElementChild;
+     var last = ul.lastElementChild;
+     for (var i = 0; i < li.length; i++) {
+         li[i].onmouseover = function(){
+
+            if (this ===first || this ==last) {
+                this.className= 'side';
+            }else{
+                this.className='focus';
+                this.previousElementSibling.className='near';
+                this.nextElementSibling.className='near';
+                first.className='none';
+                last.className='none';
+            }
+
+
+         }
+
+         li[i].onmouseout = function(){
+          for(var i = 0;i<li.length;i++){
+            li[i].className='';
+          }
+          first.className='none';
+          last.className='none';
+         }
+     };
+</script>
+</body>
+</html>
