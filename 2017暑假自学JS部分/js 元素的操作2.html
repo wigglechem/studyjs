@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>js 元素的操作2</title>
+
+</head>
+<body>
+<input type="button" name="" value="点击添加" id="btn">
+<ul id="ul">
+    <li>0</li>
+</ul>
+<script type="text/javascript">
+      var btn = document.getElementById('btn');
+         var ul = document.getElementById('ul');
+         var html = '';
+         var num = 0;
+         btn.onclick=function(){
+
+
+            num++;
+            var li = document.createElement('li');
+
+            li.innerHTML = num;
+
+            ul.insertBefore(li,ul.children[0]);//向前添加元素 新创建的在第一个 ul 第一个子结点插入元素
+
+
+         }
+</script>
+</body>
+</html>

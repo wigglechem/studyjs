@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>js 元素的操作5 克隆</title>
+    <style type="text/css">
+        #div1{
+            width:100px;
+            height:100px;
+            background:gold;
+        }
+        #div2{
+            width:100px;
+            height:100px;
+            background:blue;
+        }
+    </style>
+</head>
+<body>
+<input type="button" name="" value="点击添加" id="btn">
+<div id="box">
+
+
+    <div id="div1"></div>
+
+    <hr id="hr">
+
+    <div id="div2"></div>
+
+
+</div>
+
+<script type="text/javascript">
+         var btn = document.getElementById('btn');
+         var div1 = document.getElementById('div1');
+         var div2 = document.getElementById('div2');
+         var box = document.getElementById('box');
+         var hr = document.getElementById('hr');
+
+         var num = 0;
+         btn.onclick=function(){
+               var celemnt = div2.cloneNode(true); //cloneNode(true) 子节点也克隆
+               box.insertBefore(celemnt,hr)
+
+         }
+</script>
+</body>
+</html>

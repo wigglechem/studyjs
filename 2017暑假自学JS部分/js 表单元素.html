@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>js 表单元素</title>
+</head>
+<body>
+<table border="" id="box">
+
+    <thead >
+        <tr>
+            <th>头1</th>
+            <th>头2</th>
+            <th>头3</th>
+            <th>头4</th>
+        </tr>
+    </thead>
+    <tfoot>
+            <td>统计一</td>
+            <td>统计二</td>
+            <td>统计三</td>
+            <td>统计四</td>
+    </tfoot>
+    <tbody>
+        <tr>
+            <td>内容一</td>
+            <td>内容二</td>
+            <td>内容三</td>
+            <td>内容四</td>
+    </tbody>
+    <tbody>
+        <tr>
+            <td>内容一</td>
+            <td>内容二</td>
+            <td>内容三</td>
+            <td>内容四</td>
+    </tbody>
+
+
+</table>
+<script type="text/javascript">
+     var box = document.getElementById('box');
+     box.tHead.style.borderColor='red';
+     box.rows[1].style.background='greenyellow';//行数 获取的是行数一组
+     box.tFoot.style.background='#ccc';
+     box.tBodies[1].style.background='blue';
+     box.rows[1].cells[0].style.background = 'pink';//单元格控制
+</script>
+</body>
+</html>

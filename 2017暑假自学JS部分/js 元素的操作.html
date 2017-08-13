@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>js 元素的操作</title>
+</head>
+<body>
+<input type="button" name="" value="点击添加" id="btn">
+<ul id="ul"></ul>
+
+    <script type="text/javascript">
+         var btn = document.getElementById('btn');
+         var ul = document.getElementById('ul');
+         var html = '';
+         var num = 0;
+         btn.onclick=function(){
+
+            /*
+            方法一：
+            num++;
+            html +='<li>'+num+'</li>';
+
+            ul.innerHTML = html;
+
+             */
+
+            num++;
+            var li = document.createElement('li');
+
+            li.innerHTML = num;
+
+            ul.appendChild(li);
+         }
+    </script>
+
+</body>
+</html>
