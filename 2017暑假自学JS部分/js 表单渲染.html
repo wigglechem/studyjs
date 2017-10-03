@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>js 表单渲染</title>
+    <style type="text/css">
+  table{
+    text-align:center;
+  }
+  thead{
+    background:#c1c1c1;
+  }
+    </style>
+</head>
+<body>
+<table border="" id="tab">
+    <thead>
+
+            <th><input type="checkbox" name="">商品全选</th>
+            <th>商品编号</th>
+            <th>商品名称</th>
+            <th>商品价格</th>
+            <th>商品数量</th>
+            <th>商品删除</th>
+
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+<script type="text/javascript">
+      var adata=[
+    {
+     num:1,
+     name:'雪碧',
+     price:2.2,
+     count:50
+    },
+    {
+     num:2,
+     name:'可口可乐',
+     price:2.3,
+     count:55
+    },
+    {
+     num:3,
+     name:'百事可乐',
+     price:2.3,
+     count:56
+    },
+    {
+     num:4,
+     name:'美年达',
+     price:2.1,
+     count:45
+    },
+    {
+     num:5,
+     name:'醒目',
+     price:2.0,
+     count:35
+    },
+    {
+     num:6,
+     name:'健力宝',
+     price:2.6,
+     count:40
+    },
+    {
+     num:7,
+     name:'七喜',
+     price:2.2,
+     count:42
+    },
+    {
+     num:8,
+     name:'王老吉',
+     price:3.2,
+     count:30
+    },
+    {
+     num:9,
+     name:'加多宝',
+     price:3.3,
+     count:45
+    },
+    {
+     num:10,
+     name:'芬达',
+     price:2.4,
+     count:48
+    },
+
+
+    ]
+
+    var tab = document.getElementById('tab');
+    var tbody = tab.tBodies[0];
+
+    for(var i = 0;i<adata.length;i++){
+        var tr=document.createElement('tr');
+
+        if(i%2){
+            tr.style.background = 'yellowgreen';
+        }else{
+            tr.style.background = 'pink';
+        }
+
+        var td = document.createElement('td');
+        td.innerHTML = '<input type="checkbox">'
+        tr.appendChild(td);
+
+        var checked = td.children[0];
+        checked.onclick=function(){
+
+        }
+
+
+        for(var attr in adata[i]){
+            var td = document.createElement('td');
+            td.innerHTML = adata[i][attr];
+            tr.appendChild(td)
+        }
+        var td = document.createElement('td');
+        td.innerHTML='<a href="#">删除</a>';
+        tr.appendChild(td);
+        tbody.appendChild(tr);
+    }
+    var achecked = tbody.getElementsByTagName('input');
+    function setcolor(){
+       for(var i = 0;i<achecked.length;i++){
+        if (achecked[i].checked) {
+            achecked[i].parentNode.parentNode.style.background='yellow'
+        }else{
+            if (i%2) {
+                 achecked[i].parentNode.parentNode.style.background='yellowgreen';
+            }else{
+                achecked[i].parentNode.parentNode.style.background='pink';
+            }
+        }
+       }
+    }
+</script>
+</body>
+</html>
