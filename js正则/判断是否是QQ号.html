@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script type="text/javascript">
+
+    window.onload=function(){
+        var aInput = document.getElementsByTagName('input');
+
+        var re =/^[1-9]\d{4,11}$/
+
+        aInput[1].onclick=function(){
+            if(re.test(aInput[0].value)){
+            alert('是QQ号')
+            }
+
+        else{
+            alert('不是QQ号')
+        }
+
+        }
+
+
+
+
+    }
+
+
+    </script>
+</head>
+<body>
+<input type="" name="" ><input type="button" name="" value="confirm">
+
+
+
+</body>
+</html>

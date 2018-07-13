@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script type="text/javascript">
+    // | 或的意思
+window.onload=function(){
+    var aT=document.getElementsByTagName('textarea');
+    var oInput = document.getElementById('input1');
+    var re=/菲称|中国船|监视之下/g;
+
+    oInput.onclick=function(){
+        //aT[1].value=aT[0].value.replace(re,'*');
+        aT[1].value=aT[0].value.replace(re,function(str){
+
+            //函数的第一个参数就是匹配成功的字符
+            var result='';
+            for(var i=0;i<str.length;i++){
+                result+='*';
+            }
+            return result;
+
+        });
+    }
+
+}
+
+
+
+    </script>
+</head>
+<body>
+
+替换前<br/>
+<textarea name=""></textarea><br>
+替换后<br/>
+<textarea name=""></textarea><br>
+<input type="button" name="" value="确定" id="input1">
+
+
+
+
+</body>
+</html>

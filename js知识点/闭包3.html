@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script type="text/javascript">
+
+         //好处：
+         //1.希望一个变量长期驻扎在内存当中
+         //2.避免全局变量的污染
+/*
+         var a = 1;
+         function aaa(){
+
+
+            a++;
+            alert(a);
+         }
+         //aaa();
+        // aaa();
+        //alert(a)
+*/
+
+        function aaa(){
+            var a =1;
+            return  function (){
+                a++;
+                alert(a);
+            }
+
+        }
+
+        var b =aaa();
+
+        b();
+        b();
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script type="text/javascript">
+
+        /*
+        转义字符：
+        \s :空格
+        \S 非空格
+        \d 数字
+        \D 非数字
+        \w 字符  字母数字下划线
+        \W 非字符
+         */
+
+
+         var str='3445345r234234';
+         var re=/\D/;
+         if(re.test(str)){
+            alert('不全是数字');
+
+         }
+         else{
+            alert('全是数字');
+         }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

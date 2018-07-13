@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script type="text/javascript">
+         window.onload=function(){
+            var aLi=document.getElementsByTagName('li');
+
+            for(var i =0;i<aLi.length;i++){
+
+                (function(i){
+
+                    aLi[i].onclick=function(){
+
+                    alert(i)
+                }
+
+                })
+
+                (i);
+
+
+
+            }
+
+
+         }
+
+    </script>
+</head>
+<body>
+<ul>
+    <li>111111</li>
+    <li>22222222222</li>
+    <li>3333333333</li>
+
+</ul>
+
+</body>
+</html>

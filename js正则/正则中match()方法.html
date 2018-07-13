@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script type="text/javascript">
+         //match：正则去匹配字符串，如果匹配成功，就返回匹配成功的数组，如果匹配不成功，就返回null
+         //正则默认：正则匹配成功就会结束 不会继续匹配
+         //如果想全部查找 就要加标识g(全局匹配)
+         //量词：匹配不确定的位置
+         //+ 至少出现一次
+         //
+
+         var str='hadjf123sdk54ddfldfk33ldkjf3223';
+         var re=/\d+/g;
+         alert(str.match(re));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
